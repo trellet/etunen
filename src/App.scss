@@ -1,0 +1,231 @@
+@import "bootstrap/scss/functions";
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+// $headings-font-family: Rubik, Inter, sans-serif;
+// $font-family-base: "Saira", sans-serif;
+// $font-sans-serif: "Saira", sans-serif;
+$font-family-base: sans-serif;
+$font-sans-serif: sans-serif;
+$headings-font-weight: 400;
+// $font-size-base: 0.875rem;
+$font-size-base: 0.875rem;
+$font-weight-bold: 500;
+// $primary: #005DA4;
+$primary: #0071c7;
+$white: #fff;
+$black: #000;
+
+$navbar-dark-color: rgba($white, 0.7);
+$navbar-dark-hover-color: rgba($white, 0.95);
+
+$navbar-light-color: rgba($black, 0.7);
+$navbar-light-hover-color: rgba($black, 0.9);
+$link-decoration: none;
+// $enable-shadows:                    true;
+// $card-box-shadow:                   rgba(35,46,60,.04) 0 2px 4px 0;
+$body-bg: #e1e2e3;
+// $body-bg: #282930;
+// $body-bg: #10141b;
+
+// $body-color: #c9d1d9;
+$body-color: #343434;
+$card-border-color: #424f5e;
+$card-cap-bg: #005da4;
+$card-cap-color: #f9f9f9;
+
+$border-color: #424f5e;
+$table-border-color: tint-color($body-bg, 10%);
+$table-group-separator-color: #424f5e;
+
+// $card-bg: #151c26;
+// $card-color: $body-color;
+// $card-cap-bg: #162030;
+// $form-select-bg: $body-bg;
+// $input-bg: #121419;
+// $input-color: $body-color;
+// // $link-color: #2987cf;
+// $link-color: #5fbaff;
+// $input-border-width: 1px;
+// $input-border-color: $border-color;
+
+$card-border-width: 0;
+// $card-border-color:                 rgba($black, .125) !default;
+
+// $offcanvas-bg-color: #0f1319;
+// $offcanvas-color: $body-color;
+$list-group-bg: none;
+$btn-close-color: inherit;
+
+// $popover-bg: #424f5e;
+// $popover-body-color: $body-color;
+
+$table-cell-padding-y: 0.75rem;
+$table-cell-padding-x: 0.75rem;
+
+$dropdown-color: $body-color;
+$dropdown-bg: $white;
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-color: tint-color($body-color, 10%);
+$dropdown-link-hover-bg: tint-color($body-bg, 5%);
+$dropdown-border-color: $border-color;
+
+$navbar-nav-link-padding-x: 0.85rem;
+
+// $dropdown-link-active-color:        $component-active-color;
+// $dropdown-link-active-bg:           $component-active-bg;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+) !default;
+
+@import "bootstrap";
+
+body {
+  overflow-y: scroll;
+}
+
+.card-header {
+  font-family: $headings-font-family;
+  // padding: 0.75rem 1.25rem;
+}
+
+.card-main {
+  min-height: 300px;
+}
+
+.bg-brand {
+  background-color: #00467b;
+}
+
+.icon {
+  vertical-align: top;
+  max-width: 20px;
+  max-height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.navbar-bottom {
+  // border-bottom: 1.5px solid rgba(101,109,119,.16);
+  margin-bottom: 2rem;
+}
+
+.signin {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.signin input {
+  margin-top: -1px;
+  border-radius: 0;
+}
+
+.signin input:first-child {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+.signin input:last-child {
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.board-post {
+  margin-bottom: 1.5rem;
+}
+
+.nav-link {
+  text-align: center;
+}
+
+.board-post-header button,
+.board-post-header a {
+  color: #e2e2e2;
+}
+
+.board-post-body img {
+  max-width: 100%;
+}
+
+.board-forum-select {
+  width: 320px;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  border: 1.5px solid rgba(101, 109, 119, 0.16);
+  border-radius: $border-radius-sm;
+  margin-left: 2rem;
+  padding: 1rem;
+}
+
+.offcanvas-bottom {
+  height: 470px;
+}
+
+.board-controls {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+// .board-news-post-header {
+//   font-size: 2.25em;
+// }
+
+.board-news-date {
+  font-weight: 500;
+}
+
+#footer {
+  min-height: 500px;
+}
+
+.offcanvas-header .btn-close {
+  filter: invert(1);
+}
+
+.table-results {
+  width: auto;
+  font-size: 0.875em;
+}
+
+.table-results thead {
+  background: rgba(0, 0, 0, 0.05) !important;
+  font-weight: bold;
+}
+
+.table-points-total {
+  background: rgba(0, 0, 0, 0.05) !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.table-sm > :not(caption) > * > * {
+  padding: 0.35rem;
+  padding-right: 1.5rem;
+}
+
+.table-races {
+  width: auto;
+}
+
+.table-races > :not(caption) > * > * {
+  padding-right: 32px;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
